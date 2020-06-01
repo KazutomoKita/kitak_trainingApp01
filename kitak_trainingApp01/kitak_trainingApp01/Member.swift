@@ -8,6 +8,7 @@ class Member  {
     var team: String
     var year: String
     
+    
     //MARK: Initialization
     init?(photo: UIImage?, name: String, team: String, year: String) {
         
