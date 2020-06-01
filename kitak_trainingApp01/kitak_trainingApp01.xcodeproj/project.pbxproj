@@ -13,6 +13,8 @@
 		7DF6AE6024854832005F4A55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6AE5E24854832005F4A55 /* Main.storyboard */; };
 		7DF6AE6224854834005F4A55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6AE6124854834005F4A55 /* Assets.xcassets */; };
 		7DF6AE6524854834005F4A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6AE6324854834005F4A55 /* LaunchScreen.storyboard */; };
+		7DF6AE7024854924005F4A55 /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF6AE6E24854924005F4A55 /* MemberTableViewCell.swift */; };
+		7DF6AE7124854924005F4A55 /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6AE6F24854924005F4A55 /* MemberTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7DF6AE6124854834005F4A55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DF6AE6424854834005F4A55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DF6AE6624854834005F4A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF6AE6E24854924005F4A55 /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
+		7DF6AE6F24854924005F4A55 /* MemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				7DF6AE5824854832005F4A55 /* AppDelegate.swift */,
 				7DF6AE5A24854832005F4A55 /* SceneDelegate.swift */,
 				7DF6AE5C24854832005F4A55 /* ViewController.swift */,
+				7DF6AE6E24854924005F4A55 /* MemberTableViewCell.swift */,
+				7DF6AE6F24854924005F4A55 /* MemberTableViewCell.xib */,
 				7DF6AE5E24854832005F4A55 /* Main.storyboard */,
 				7DF6AE6124854834005F4A55 /* Assets.xcassets */,
 				7DF6AE6324854834005F4A55 /* LaunchScreen.storyboard */,
@@ -128,6 +134,7 @@
 				7DF6AE6524854834005F4A55 /* LaunchScreen.storyboard in Resources */,
 				7DF6AE6224854834005F4A55 /* Assets.xcassets in Resources */,
 				7DF6AE6024854832005F4A55 /* Main.storyboard in Resources */,
+				7DF6AE7124854924005F4A55 /* MemberTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 				7DF6AE5D24854832005F4A55 /* ViewController.swift in Sources */,
 				7DF6AE5924854832005F4A55 /* AppDelegate.swift in Sources */,
 				7DF6AE5B24854832005F4A55 /* SceneDelegate.swift in Sources */,
+				7DF6AE7024854924005F4A55 /* MemberTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
