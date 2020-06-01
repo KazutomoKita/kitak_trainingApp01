@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q0r-Wt-0gX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jVr-sJ-rwS">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="cfV-uD-83P" customClass="MemberTableViewCell" customModule="kitak_trainingApp01" customModuleProvider="target">
@@ -36,18 +36,90 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jVr-sJ-rwS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="95F-fS-aQA"/>
-                            <constraint firstItem="jVr-sJ-rwS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mvO-x5-HVW"/>
-                            <constraint firstItem="jVr-sJ-rwS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="r1e-Gu-7nc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jVr-sJ-rwS" secondAttribute="trailing" constant="20" id="yRd-KM-OfE"/>
+                            <constraint firstItem="jVr-sJ-rwS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AFa-XE-hKT"/>
+                            <constraint firstItem="jVr-sJ-rwS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HZf-az-mXx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jVr-sJ-rwS" secondAttribute="trailing" constant="20" id="Kga-W6-qmG"/>
+                            <constraint firstItem="jVr-sJ-rwS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QDu-SU-PAP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6SZ-Zc-vFT">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Meq-bn-44t">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7zo-xX-JuW">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tappedRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcU-QF-KhJ"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="rightButton:" destination="BYZ-38-t0r" id="Uim-lh-wdx"/>
+                                <segue destination="SZ7-bI-oga" kind="presentation" identifier="toAdd" id="Wtz-CK-JdN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="memberTableView" destination="jVr-sJ-rwS" id="wBm-f6-kxm"/>
+                        <outlet property="rightButton" destination="7zo-xX-JuW" id="vE2-qL-QE7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Member Add View Controller-->
+        <scene sceneID="kPY-dn-8Iq">
+            <objects>
+                <viewController id="SZ7-bI-oga" customClass="MemberAddViewController" customModule="kitak_trainingApp01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k6Y-Ho-9M8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LBm-Tb-Nkk">
+                                <rect key="frame" x="0.0" y="20" width="414" height="788"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="27v-dj-jDA">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="27v-dj-jDA" id="rZy-uE-ajs">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LBm-Tb-Nkk" firstAttribute="leading" secondItem="Ois-vz-BqB" secondAttribute="leading" id="4HP-6C-DzS"/>
+                            <constraint firstItem="LBm-Tb-Nkk" firstAttribute="bottom" secondItem="Ois-vz-BqB" secondAttribute="bottom" id="77y-Or-dAA"/>
+                            <constraint firstItem="LBm-Tb-Nkk" firstAttribute="top" secondItem="Ois-vz-BqB" secondAttribute="top" constant="20" id="Pvo-xj-kRd"/>
+                            <constraint firstItem="LBm-Tb-Nkk" firstAttribute="trailing" secondItem="Ois-vz-BqB" secondAttribute="trailing" id="mVq-qI-0AB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ois-vz-BqB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxj-Yd-b4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302.898550724638" y="-45.535714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5fk-Ul-ROy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q0r-Wt-0gX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zdh-Sf-9ht">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7xt-gR-QFt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="239-G0-SgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>

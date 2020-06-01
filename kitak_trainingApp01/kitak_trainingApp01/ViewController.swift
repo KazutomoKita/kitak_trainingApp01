@@ -4,6 +4,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var memberTableView: UITableView!
     
+    @IBOutlet weak var rightButton: UIButton!
+    
+    
+    
     var members = [Member]()
     
     override func viewDidLoad() {
@@ -47,6 +51,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             members.remove(at: indexPath.row)
             memberTableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
         }
+    }
+    
+    @IBAction func tappedRightButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toAdd", sender: self)
     }
     
     private func loadSampleMember() {
