@@ -3,13 +3,13 @@ import UIKit
 
 class Member  {
     //MARK: Properties
-    var photo: UIImage
+    var photo: UIImage?
     var name: String
     var team: String
     var year: String
     
     //MARK: Initialization
-    init?(photo: UIImage, name: String, team: String, year: String) {
+    init?(photo: UIImage?, name: String, team: String, year: String) {
         
         // The name must not be empty
         guard !name.isEmpty else {

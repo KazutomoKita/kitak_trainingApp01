@@ -9,7 +9,12 @@
 import UIKit
 
 class MemberTableViewCell: UITableViewCell {
-
+    
+   
+    @IBOutlet weak var memberImageView: UIImageView!
+    @IBOutlet weak var memberName: UILabel!
+    @IBOutlet weak var teamName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
