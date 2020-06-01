@@ -7,10 +7,10 @@ class Member  {
     var name: String
     var team: String
     var year: String
-    
+    var whatever: String
     
     //MARK: Initialization
-    init?(photo: UIImage?, name: String, team: String, year: String) {
+    init?(photo: UIImage?, name: String, team: String, year: String, whatever:String) {
         
         // The name must not be empty
         guard !name.isEmpty else {
@@ -25,11 +25,16 @@ class Member  {
             return nil
         }
         
+        guard !whatever.isEmpty else {
+            return nil
+        }
+        
         // Initialize stored properties.
         self.photo = photo
         self.name = name
         self.team = team
         self.year = year
+        self.whatever = whatever
     }
     
 }

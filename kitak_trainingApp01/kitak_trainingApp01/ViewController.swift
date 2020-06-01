@@ -61,11 +61,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let photo1 = UIImage(named: "anri")
             let photo2 = UIImage(named: "bannot")
         
-        guard let member1 = Member(photo: photo1, name: "中野杏梨", team: "メディア開発統括部Web1グループ", year: "19卒")
+        guard let member1 = Member(photo: photo1, name: "中野杏梨", team: "メディア開発統括部Web1グループ", year: "19卒", whatever: "色気研究家")
             else {
                 fatalError("Unable to instantiate cosme1")
             }
-        guard let member2 = Member(photo: photo2, name: "坂野琢也", team: "BSコマース開発第２グループ", year: "19卒")
+        guard let member2 = Member(photo: photo2, name: "坂野琢也", team: "BSコマース開発第２グループ", year: "19卒", whatever: "女の子がいれば元気いっぱい！")
             else {
                 fatalError("Unable to instantiate cosme2")
             }
